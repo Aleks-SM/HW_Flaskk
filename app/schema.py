@@ -3,7 +3,7 @@ from abc import ABC
 from typing import Optional,Type
 
 
-class AbstrackUser(pydantic.BaseModel,ABC):
+class AbstractUser(pydantic.BaseModel,ABC):
     name: str
     password: str
 
@@ -21,11 +21,11 @@ class AbstrackUser(pydantic.BaseModel,ABC):
             raise ValueError("Length of name must be greater than 2 or equal to 50")
         return value
 
-class CreateUser(AbstrackUser):
+class CreateUser(AbstractUser):
     name: str
     password: str
 
-class UpdateUser(AbstrackUser):
+class UpdateUser(AbstractUser):
     name: Optional[str] = None
     password: Optional[str] = None
 
