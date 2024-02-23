@@ -3,3 +3,4 @@ SQLAlchemy==2.0.27
 python-dotenv==1.0.1
 jsonify==0.5
 requests==2.31.0
+pydantic==2.6.1
